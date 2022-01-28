@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+}
+
+.rounded {
+  counter-reset: li; 
+  list-style: none; 
+  font: 14px "Trebuchet MS", "Lucida Sans";
+  padding: auto;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+.rounded a {
+  position: relative;
+  display: block;
+  padding: .4em .4em .4em 4em;
+  margin: .5em .5em;
+  background: #DAD2CA;
+  color: #444;
+  text-decoration: none;
+  border-radius: .3em;
+  transition: .3s ease-out;
+  }
+  .rounded a:hover {background: #E9E4E0;}
+  .rounded a:hover:before {transform: rotate(360deg);}
+  .rounded a:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: #8FD4C1;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: .3em solid white;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all .3s ease-out;
+  }
+
+header {
+  text-align: justify;
+  letter-spacing: 1px;
+  height: 4em;
+  padding: 2em 10%;
+  background: #303133;
+  color: #fff;
+}
+
+header h1 {
+  display: inline-block;
+}
+
+header h1 a {
+  color: #DAD2CA;
+  text-decoration: none;
+}
+
+header nav {
+    display: inline-block;
+    justify-self: right;
+}
+header nav a {
+  color: #DAD2CA;
+  justify-content:right;
+  margin-left: 2em;
+  text-decoration: none;
+
+}
+
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(86, 236, 229);
+  border-color: rgb(58, 199, 218) transparent rgb(33, 220, 226) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.survey {
+  padding: auto;
+  position: relative;
+  justify-self: center;
+}
+
+#question-list {
+  align-items: center;
+  align-self: center;
+  
+}
+
+#question-list .choice-item { 
+  display: inline-block;
+  align-self: center;
+}
+
+.outer {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+.inner {
+  text-align: center;
+  width: auto;
+  padding: 0 15px;
+}
+
+#range1 {
+  height: 100%;
+  min-height: 400px;
+  margin-top: 100px;
+}
+
+#range1 .login-wr {
+  position: relative;
+  margin: 0 auto;
+  background: #ecf0f1;
+  max-width: 350px;
+  border-radius: 5px;
+  border-top: 4px solid #e74c3c;
+  box-shadow: 3px 3px 10px #333;
+  padding: 15px;
+}
+
+
+#range1 h2 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 2em;
+  margin-top: 10px;
+  color: #34495e;
+}
+
+#range1 .form {
+  padding-top: 20px;
+  text-align: center;
+}
+
+#range1 input[type="text"], 
+#range1 input[type="password"],
+#range1 button {
+  width: 80%;
+  margin-bottom: 25px;
+  height: 40px;
+  border-radius: 5px;
+  outline: 0;
+}
+    
+#range1 input[type="text"],
+#range1 input[type="password"] {
+  border: 1px solid #bbb;
+  padding: 0 0 0 10px;
+  font-size: 14px;
+}
+
+#range1 a {
+  text-align: center;
+  font-size: 12px;
+  color: #3498db;
+}
+    
+#range1 button {
+  background: #e74c3c;
+  border:none;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: box-shadow .4s ease;
+}
