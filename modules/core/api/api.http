@@ -1,0 +1,17 @@
+POST {{backend_addr}}/api/core/auth/register/
+Content-Type: application/json
+
+{
+  "username": "roma4",
+  "password": "08022001q"
+}
+###
+
+POST {{backend_addr}}/api/core/auth/login/
+Content-Type: application/json
+
+{
+  "username": "roma4",
+  "password": "08022001q"
+}
+###

@@ -1,0 +1,25 @@
+GET {{backend_addr}}/api/questionnaire/survey/
+###
+
+POST {{backend_addr}}/api/questionnaire/answer-survey/
+Content-Type: application/json
+Authorization: Token {{user_token}}
+
+{
+  "survey_id": 3,
+  "questions_answers": [
+    {
+      "question_id": 3,
+      "choice_id": 2
+    },
+    {
+      "question_id": 4,
+      "choice_id": 4
+    }
+  ]
+}
+###
+
+GET {{backend_addr}}/api/questionnaire/answer-survey/
+Authorization: Token {{user_token}}
+###

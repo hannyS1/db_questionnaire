@@ -1,0 +1,16 @@
+FROM python:3.8
+
+RUN apt-get update && apt-get install fonts-liberation netcat openssl libssl-dev libffi-dev wkhtmltopdf libgdal-dev postgis -y && apt-get autoremove -y && apt-get clean
+
+RUN mkdir /server
+WORKDIR /server
+
+COPY ./requirements.txt /server/
+RUN pip install -r /server/requirements.txt
+COPY ./config /server/config
+COPY ./manage.py /server/
+COPY ./modules /server/modules
+COPY ./test_data.py /server/
+COPY ./media /server/media
+COPY ./templates /server/templates
+COPY ./logs /server/logs
